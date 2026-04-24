@@ -63,16 +63,7 @@ _ORDER = [
 
 def _precedence(pn: dict[str, Any]) -> int:
     """Sort priority for placenames."""
-    if pn["nafn"] in _HARDCODED_PRIORITY:
-        (lat, lng) = _HARDCODED_PRIORITY[pn["nafn"]]
-        if pn["lat_wgs84"] == lat and pn["long_wgs84"] == lng:
-            return 0
-
-    fl = pn["flokkur"]
-    if fl in _ORDER:
-        return _ORDER.index(fl)
-    # Any number > len(_ORDER) will do for sorting purposes
-    return 9999
+    pass
 
 
 def placename_lookup(placename: str, partial: bool = False) -> list[dict[str, Any]]:

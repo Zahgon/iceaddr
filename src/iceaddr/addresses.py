@@ -40,7 +40,7 @@ def _add_municipality_info(addr: dict[str, Any]) -> dict[str, Any]:
 
 def _postprocess_addr(addr: dict[str, Any]) -> dict[str, Any]:
     """Add postcode and municipality info to address."""
-    return _add_municipality_info(_add_postcode_info(addr))
+    pass
 
 
 def _run_addr_query(q: str, qargs: list[str]) -> list[dict[str, Any]]:
